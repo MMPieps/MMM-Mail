@@ -4,8 +4,12 @@ The lightwight E-Mail Scanner for your mirror with integrated "NEW-Mail" Alert
 
 ## Install
 
-To install the module, just clone this repository to your __modules__ folder: `git clone https://github.com/ronny3050/email-mirror.git email`. 
-Then run `cd email` and `npm install` which will install the dependencies.
+To install the module, go to your modules-folder and execute the following instructions: 
+```shell
+git clone https://github.com/MMPieps/MMM-Mail
+cd MMM-Mail
+npm install
+```
 
 ## Using
 
@@ -23,7 +27,8 @@ modules: [
                 host: 'imap.gmail.com',
                 port: 993,
                 numberOfEmails: 5,
-                fade: true
+                fade: true,
+				subjectlength: 50
         },
 	}
 ]
@@ -77,11 +82,13 @@ The following properties can be configured:
 				<br><b>Default value:</b> <code>true</code>
 			</td>
 		</tr>
+		<tr>
+			<td><code>subjectlength</code></td>
+			<td>Cuts the Email - subject to a given length	</td>
+		</tr>
 	</tbody>
 </table>
 
-# Special Thanks to Ronny 
+# Special Thanks to ronny3050
 (I used his Frontend and some Backend inspiration)
-you can find his module on <href> https://github.com/ronny3050/email-mirror </>
-
-
+you can find his module on https://github.com/ronny3050/email-mirror
