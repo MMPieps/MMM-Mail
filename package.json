@@ -1,0 +1,15 @@
+{
+  "name": "MMM-Mail",
+  "description": "Widget that notifies mirror on new incoming email.",
+  "keywords": [
+    "email",
+    "mirror",
+    "smart mirror",
+    "mirror email"
+  ],
+  "version": "0.0.1",
+  "dependencies": {
+    "util": "^0.10.0",
+    "emailjs-imap-client": "^2.0.0"
+  }
+}
