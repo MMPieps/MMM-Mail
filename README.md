@@ -2,6 +2,7 @@
 
 The lightwight E-Mail Scanner for your mirror with integrated "NEW-Mail" Alert
 
+![alt tag](https://github.com/MMPieps/MMM-Mail/blob/master/screenshot.PNG)
 ## Install
 
 To install the module, go to your modules-folder and execute the following instructions: 
