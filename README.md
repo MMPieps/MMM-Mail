@@ -24,7 +24,7 @@ modules: [
             header: 'Email',
             config:{
                 user: 'johndoe@gmail.com',
-                password: 'xxx',
+                pass: 'xxx',
                 host: 'imap.gmail.com',
                 port: 993,
                 numberOfEmails: 5,
