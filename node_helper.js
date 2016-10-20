@@ -66,9 +66,8 @@ module.exports = NodeHelper.create({
 			//--> IMAP-Update event
 			client.onupdate = function(path, type, value){
 				//console.log("onupdate Event Called");
-				if (type === 'fetch') {
-					analyzeEmails(path,this, that);
-				}else if (type === 'exists') {
+				analyzeEmails(path,this, that)
+				if (type === 'exists') {
 					client.listMessages('inbox', value, ['envelope']).then((messages) => {
 						messages.forEach((message) => {
 							var d = message.envelope;
