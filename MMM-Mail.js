@@ -35,10 +35,19 @@ Module.register("MMM-Mail",{
 			}
 			if(notification === 'EMAIL_NEWMAIL')
 			{
+				var sender;
+				if(payload.sender.name.length>0)
+				{
+					sender = payload.sender.name;
+				}
+				else
+				{
+					sender = payload.sender.address;
+				}
 				this.sendNotification("SHOW_ALERT",{
 					type: "notification",
-					title: "New Email",
-					message: "from "+payload.name
+					title: "New Email on "+payload.user,
+					message: "from "+sender
 				});
 			}
 			if(notification === 'EMAIL_ERROR')

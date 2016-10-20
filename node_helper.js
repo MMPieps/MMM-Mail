@@ -65,14 +65,13 @@ module.exports = NodeHelper.create({
 			//==================================
 			//--> IMAP-Update event
 			client.onupdate = function(path, type, value){
-				//console.log("onupdate Event Called");
 				analyzeEmails(path,this, that);
 				if (type === 'exists') {
 					client.listMessages('inbox', value, ['envelope']).then((messages) => {
 						messages.forEach((message) => {
 							var d = message.envelope;
-							console.log("NEUE EMAIL VON %s",d.from[0].name);
-							that.sendSocketNotification('EMAIL_NEWMAIL', {user: client.options.auth.user, sender: {name: d.from[0].name}});
+							console.log("NEUE EMAIL VON %s (%s) im Postfach %s",d.from[0].name,d.from[0].address,client.options.auth.user);
+							that.sendSocketNotification('EMAIL_NEWMAIL', {user: client.options.auth.user, sender: d.from[0]});
 						});
 					});
 				};
