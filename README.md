@@ -5,9 +5,9 @@ The lightwight E-Mail Scanner for your mirror with integrated "NEW-Mail" Alert
 ![alt tag](https://github.com/MMPieps/MMM-Mail/blob/master/screenshot.PNG)
 ## Install
 
-To install the module, go to your modules-folder and execute the following instructions: 
+To install the module, go to your modules-folder and execute the following instructions:
 ```shell
-git clone https://github.com/MMPieps/MMM-Mail
+git clone https://github.com/DaneTheory/MMM-Mail.git
 cd MMM-Mail
 npm install
 ```
